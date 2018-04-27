@@ -1,0 +1,65 @@
+/* components/memberList/memberList.wxss */
+@import '../../app.wxss';
+.member-list{
+  border-radius: 10rpx;
+  padding:0 35rpx;
+  background:rgba(255,255,255,1);
+}
+.member-item{
+  display: flex;
+  height: 110rpx;
+  flex-flow: ro nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1rpx #bbe6f5 solid;
+}
+.member-item:last-child{
+  border:0;
+}
+.item-left{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item-disc{
+  width:36rpx;
+  height:36rpx;
+  overflow: hidden;
+  border-radius: 18rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color:#fff;
+  font-size:30rpx;
+  margin-right:34rpx;
+}
+.item-user{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.item-picture{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 40rpx;
+  overflow:hidden;
+  margin-right:18rpx;
+}
+.item-num{
+  color:#666;
+  font-size:26rpx;
+}
+.orange{
+  background:#f2c700;
+}
+.pink{
+  background:#9b86af;
+}
+.coffe{
+  background:#b66f13;
+}
+.gray{
+  background:#bfbfbf;
+}
+

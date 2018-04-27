@@ -1,0 +1,11 @@
+/* pages/rank/rank.wxss */
+.container{
+  display: block;
+}
+.pd-all{
+  padding:35rpx;
+}
+.tab-content{
+  padding:0 35rpx;
+  padding-bottom:35rpx;
+}

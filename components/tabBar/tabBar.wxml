@@ -1,0 +1,11 @@
+<!--components/tabBar/tabBar.wxml-->
+<view class="tab-bar">
+<block wx:for="{{tabTitleList}}" wx:key="{{index}}">
+  <view class="tab-item actived" wx:if="{{item.checked}}" data-key="{{item.key}}" bindtap="itemCheck">
+    <text class="ft30" >{{item.text}}</text>
+  </view>
+  <view class="tab-item" wx:else data-key="{{item.key}}" bindtap="itemCheck">
+    <text class="ft30" >{{item.text}}</text>
+  </view>
+</block>
+</view>

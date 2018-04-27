@@ -1,0 +1,62 @@
+<!--pages/fighting/fighting.wxml-->
+<view class="container">
+  <!-- 答题进度 -->
+  <view class="game-process">
+    <view class="process-content">
+      <block wx:for="{{processData}}" wx:key="{{item.num}}">
+        <text class="{{item.checked ? 'process-item item-active' : 'process-item'}}">{{item.num}}</text>
+      </block>
+    </view>
+  </view>
+  <!-- 游戏开始 -->
+  <view class="game-box">
+    <view class="count-down">
+      <circleCountDown cvsWidth="75" cvsHeight='75' limitTime="10" stopCount="{{stopCount}}" showCount="{{showCount}}" bindtimeOver="countDown"></circleCountDown>
+    </view> 
+    <view class='game-content'>
+      <text class="item-title ft36 textBlue">{{currGameData.title}}</text>
+      <block wx:for="{{currGameData.answerList}}" wx:key="{{index}}">
+        <block wx:if="{{!item.checked}}">
+          <view class="game-item" bindtap='checkItem' data-key="{{index}}">
+            <text class="ft40">{{item.text}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="game-item correct" bindtap='checkItem' data-key="{{index}}" wx:if="{{item.correct}}">
+            <text class="ft40">{{item.text}}</text>
+          </view>
+          <view class="game-item wrong" bindtap='checkItem' data-key="{{index}}" wx:if="{{!item.correct}}">
+            <text class="ft40">{{item.text}}</text>
+          </view>
+        </block>
+      </block>
+      <text class="item-index ft28 textGray" wx:if="{{answerStep<=3}}">第{{answerStep}}题</text>
+    </view>
+  </view>
+  <!-- 游戏说明 -->
+  <view class="game-rule flex flex-row flex-center">
+    <text class="ft30 textBlue">答对12题即挑战成功</text>
+  </view>
+  <!-- 失败弹窗 -->
+  <popAlert showAlert="{{showAlert}}" height="300" bindcloseAlert="goHome">
+    <view class="alert-content">
+      <view class="flex flex-row flex-center" style="margin-top:-50rpx;">
+        <image src="{{alertIcon}}" class="alert-icon"></image>
+        <view class="flex flex-col flex-start">
+          <text class="ft32 textBlack">差一点就能成功了</text>
+          <text class="ft24 textGray">加油，你可以的</text>
+        </view>
+      </view>
+      <button class="alert-invited-btn">邀请朋友一起玩</button>
+    </view>
+  </popAlert>
+  <!-- 成功弹窗 -->
+  <popModal height="810" bgColor="none" showModal="{{showModal}}">
+    <view class="success-content">
+        <image src="{{successImg}}" class="success-img"></image>
+        <image src="{{successBtn}}" class="success-btn" bindtap="getPrize"></image>
+      </view>
+  </popModal>
+  <!-- <游戏倒计时> -->
+    <!-- <countDown count="3" bgColor="#a0daee" bindgameStart="myCustomEvent"></countDown>   -->
+</view>

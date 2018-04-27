@@ -1,0 +1,12 @@
+<!--pages/complanit/complanit.wxml-->
+<view class="container">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" wx:key="{{item.name}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />
+      <text class="ft32 textBlack">{{item.value}}</text>
+    </label>
+  </radio-group>
+  <view class="btn-group">
+    <button class="submit-btn">投诉</button>
+  </view>
+</view>

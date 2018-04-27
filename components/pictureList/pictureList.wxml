@@ -1,0 +1,30 @@
+<!--components/pictureList/pictureList.wxml-->
+<view class="goods-list">
+  <view class="goods-item flex flex-row flex-center flex-start" wx:for="{{goodsList}}" wx:key="{{index}}">
+    <image src="{{item.picture}}" class="goods-img"></image>
+    <view class="goods-text">
+      <text class="goods-title ft30 textBlack">{{item.name}}</text>
+      <view class="goods-price flex flex-center flex-row flex-start">
+        <text class="ft28 textGray">市场价格：</text>
+        <text class="ft36 textRed">￥{{item.price}}</text>
+      </view>
+      <view class="goods-limit" wx:if="{{records}}">
+        <text class="ft28 textGray">领取成功 {{item.getTime}}</text>
+      </view>
+      <view class="goods-limit flex flex-center flex-between" wx:else>
+        <view class="flex flex-row flex-center">
+          <text class="ft28 textGray">剩余</text>
+          <text class="ft28 textRed">{{item.surplus}}</text>
+          <text class="ft28 textGray">份</text>
+        </view>
+        <view class="flex flex-row flex-center">
+          <text class="ft28 textGray">限量</text>
+          <text class="ft28 textRed">{{item.limit}}</text>
+          <text class="ft28 textGray">份</text>
+        </view>
+        <view class="btn" wx:if="{{hasBtn}}" bindtap="addAddress">领取</view>
+      </view>
+    </view>
+    
+  </view>
+</view>

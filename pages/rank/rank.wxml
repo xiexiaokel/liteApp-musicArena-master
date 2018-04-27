@@ -1,0 +1,14 @@
+<!--pages/rank/rank.wxml-->
+<view class="container">
+  <view class="pd-all tab-bar">
+    <tabBar binditemCheck="tabCheck" tabTitleList="{{tabTitleList}}"></tabBar>
+  </view>
+  <view class="tab-content">
+    <block wx:if="{{tabShow==0}}">
+      <memberList orderBy="prizeNumber" memberList="{{memberList}}"></memberList>
+    </block>
+    <block wx:if="{{tabShow==1}}">
+      <memberList orderBy="fightNumber" memberList="{{memberList}}"></memberList>
+    </block>
+  </view>
+</view>

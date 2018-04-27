@@ -1,0 +1,18 @@
+<!--components/memberList/memberList.wxml-->
+<view class="member-list">
+  <view class="member-item" wx:for="{{memberList}}" wx:key="{{index}}">
+  <view class="item-left">
+    <text class="item-disc orange" wx:if="{{index==0}}">{{index+1}}</text>
+    <text class="item-disc pink" wx:if="{{index==1}}">{{index+1}}</text>
+    <text class="item-disc coffe" wx:if="{{index==2}}">{{index+1}}</text>
+    <text class="item-disc gray" wx:if="{{index>2}}">{{index+1}}</text>
+    <view class="item-user">
+      <image src="{{item.picture}}" class="item-picture"></image>
+      <text class="ft28 textBlack">{{item.nickName}}</text>
+    </view>
+  </view>
+  <view class="flex flex-row flex-center"  wx:if="{{orderBy=='prizeNumber'}}"><text class="ft26 textGray">成功</text><text class="ft36 textBlack">{{item.successTime}}</text><text class="ft26 textGray">次</text></view>
+    
+  <view class="flex flex-row flex-center" wx:if="{{orderBy=='fightNumber'}}"><text class="ft26 textGray">挑战</text><text class="ft36 textBlack">{{item.successTime}}</text><text class="ft26 textGray">次</text></view>
+  </view>
+</view>

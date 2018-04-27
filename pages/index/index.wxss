@@ -1,0 +1,86 @@
+/**index.wxss**/
+
+.container {
+  background: linear-gradient(to bottom, #071448, #233586);
+}
+
+.user-info {
+  position: relative;
+  width: 678rpx;
+  height: 220rpx;
+  background: url('https://duokeyun.oss-cn-qingdao.aliyuncs.com/wechat/wxapp/musicArena/images/user_bg.png');
+  background-size: cover;
+  margin-top:60rpx;
+  overflow: hidden;
+}
+
+.head-pic {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.level-bar {
+  position: relative;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #5fb6ff;
+  width: 190rpx;
+  margin-left: 10rpx;
+}
+
+.curr-level {
+  position: absolute;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background: #f3f9ff;
+  left: 0;
+  top: 0;
+}
+
+.online-service {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #1b4ea2;
+  right: 0;
+  bottom: 0;
+}
+
+.online-pic {
+  width: 56rpx;
+  height: 86rpx;
+}
+
+.music-arena {
+  position: relative;
+  width:678rpx;
+  height:350rpx;
+  z-index: 1;
+  margin-top:25rpx;
+}
+.music-title{
+  width:678rpx;
+  height:350rpx;
+  position: absolute;
+  z-index: 2;
+}
+.complaint-service {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background: #1b4ea2;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.home-nav{
+  margin-top:25rpx;
+  width:678rpx;
+}
+.nav-item{
+  width:210rpx;
+  height:240rpx;
+}

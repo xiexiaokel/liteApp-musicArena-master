@@ -1,0 +1,8 @@
+<!--components/popModal/popModal.wxml-->
+<view class="pop-modal" wx:if="{{showModal}}">
+    <view class="modal-mask"></view>
+    <view class="modal-content" style="height:{{height}}rpx;margin-top:-{{height/2}}rpx;background:{{bgColor}}">
+        <slot></slot>
+        <text class="modal-close" bindtap="closeModal">×</text>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container pd-alll-md">
+  <!-- 用户信息 -->
+  <view class="user-info flex-row pd-horizontal-sm">
+    <image src="{{headPic}}" class="head-pic"></image>
+    <view class="level pd-left-sm">
+      <text class="ft40 text-white line70">Rudy</text>
+      <view class="flex-row">
+        <text class="ft30 text-white">等级LV.{{userLevel}}</text>
+        <view class="level-bar"><view class="curr-level" style="width:{{userLevel*38}}rpx;"></view></view>
+      </view>
+    </view>
+    <view class="online-service flex-row flex-center">
+        <image src="{{onlinePic}}" class="online-pic"></image>
+    </view>
+  </view>
+  <!-- 擂台赛 -->
+  <view class="music-arena">
+    <image class="music-title" src="{{titlePic}}"></image>
+    <view class="complaint-service flex-row flex-center">
+        <image src="{{complaintPic}}" class="online-pic"></image>
+    </view>
+  </view>
+  <!-- 导航 -->
+  <view class="home-nav flex-row flex-between">
+    <image class="nav-item" src="{{shopIcon}}" data-key="shop" bindtap="pageJump"></image>
+    <image class="nav-item" src="{{rankIcon}}" data-key="rank" bindtap="pageJump"></image>
+    <image class="nav-item" src="{{moreIcon}}" data-key="more" bindtap="pageJump"></image>
+  </view>
+</view>

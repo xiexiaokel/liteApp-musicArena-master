@@ -1,0 +1,47 @@
+/* components/popModal/popModal.wxss */
+
+@import '../../app.wxss';
+
+.pop-modal{
+  border-radius: 10rpx;
+  position: fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  z-index: 999;
+}
+.modal-mask{
+  position: absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  z-index: 1000;
+  background:rgba(0,0,0,0.5);
+}
+.modal-content{
+  width:680rpx;
+  background:#fff;
+  position: absolute;
+  z-index: 1001;
+  border-radius: 10rpx;
+  left:50%;
+  top:50%;
+  margin:-440rpx 0rpx 0rpx -340rpx;
+}
+.modal-close{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 40rpx;
+  border:2rpx #fff solid;
+  position: absolute;
+  left:50%;
+  margin-left:-40rpx;
+  bottom:-110rpx;
+  background:rgba(255,255,255,0.4);
+  font-size:70rpx;
+  text-align: center;
+  line-height: 76rpx;
+  color:#fff;
+}
