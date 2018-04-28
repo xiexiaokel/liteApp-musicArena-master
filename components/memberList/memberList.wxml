@@ -2,17 +2,20 @@
 <view class="member-list">
   <view class="member-item" wx:for="{{memberList}}" wx:key="{{index}}">
   <view class="item-left">
-    <text class="item-disc orange" wx:if="{{index==0}}">{{index+1}}</text>
-    <text class="item-disc pink" wx:if="{{index==1}}">{{index+1}}</text>
-    <text class="item-disc coffe" wx:if="{{index==2}}">{{index+1}}</text>
-    <text class="item-disc gray" wx:if="{{index>2}}">{{index+1}}</text>
+    <text class="gold" wx:if="{{index==0}}"></text>
+    <text class="silver" wx:if="{{index==1}}"></text>
+    <text class="bronze" wx:if="{{index==2}}"></text>
+    <text class="item-disc" wx:if="{{index>2}}">{{index+1}}</text>
     <view class="item-user">
       <image src="{{item.picture}}" class="item-picture"></image>
-      <text class="ft28 textBlack">{{item.nickName}}</text>
+      <view class="flex-col vertical-start">
+        <text class="ft30 text-white">{{item.nickName}}</text>
+        <text class="ft30 text-white">LV.{{item.level}}</text>
+      </view>
+      
     </view>
   </view>
-  <view class="flex flex-row flex-center"  wx:if="{{orderBy=='prizeNumber'}}"><text class="ft26 textGray">成功</text><text class="ft36 textBlack">{{item.successTime}}</text><text class="ft26 textGray">次</text></view>
-    
-  <view class="flex flex-row flex-center" wx:if="{{orderBy=='fightNumber'}}"><text class="ft26 textGray">挑战</text><text class="ft36 textBlack">{{item.successTime}}</text><text class="ft26 textGray">次</text></view>
+  <view class="flex flex-row flex-center"  wx:if="{{orderBy=='0'}}"><text class="ft32 text-yellow">{{item.successTime}}</text><text class="ft32 text-yellow">分</text></view>
+  <view class="flex flex-row flex-center" wx:if="{{orderBy=='1'}}"><text class="ft32 text-yellow">{{item.seasonTime}}</text><text class="ft32 text-yellow">分</text></view>
   </view>
 </view>

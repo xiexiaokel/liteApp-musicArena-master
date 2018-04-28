@@ -1,1 +1,11 @@
 /* pages/shop/shop.wxss */
+.container{
+    background: linear-gradient(to bottom, #071448, #233586);
+}
+.shop-item{
+  margin-bottom:25rpx;
+}
+.item-pic{
+  width:678rpx;
+  height:200rpx;
+}

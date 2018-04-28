@@ -109,15 +109,17 @@ Component({
       const radius = cvsWidth / 2, positionX = cvsWidth / 2, positionY = cvsHeight / 2;
       const startAngle = -1 / 2 * Math.PI;
       const ctx = wx.createCanvasContext('myCanvas', this)
-      ctx.setFillStyle('#f0f0f0')
+      ctx.setFillStyle('#f0f0f0');
       ctx.arc(positionX, positionY, radius, 0, 2 * Math.PI);
       ctx.fill();
       ctx.save();
+
       ctx.beginPath();
       ctx.setFillStyle('#ff8a00');
       ctx.arc(positionX, positionY, radius, startAngle, currAngle, false);
       ctx.lineTo(cvsHeight / 2, cvsWidth / 2);
       ctx.fill();
+      
       ctx.beginPath();
       ctx.setFillStyle('#fff')
       ctx.arc(positionX, positionY, 0.8 * radius, 0, 2 * Math.PI);

@@ -1,7 +1,7 @@
-{"usingComponents":{
-  "botNav":"../../components/botNav/botNav",
-  "circleCountDown": "../../components/circleCountDown/circleCountDown",
-  "popAlert":"../../components/popAlert/popAlert",
-  "popModal":"../../components/popModal/popModal",
-  "countDown":"../../components/countDown/countDown"
-}}
+{
+  "usingComponents": {
+    "circleCountDown": "../../components/circleCountDown/circleCountDown",
+    "popModal": "../../components/popModal/popModal",
+    "Buttom":"../../components/button/button"
+  }
+}

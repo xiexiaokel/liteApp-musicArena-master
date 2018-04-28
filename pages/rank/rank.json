@@ -1,6 +1,7 @@
 {
   "usingComponents":{
     "tabBar":"../../components/tabBar/tabBar",
-    "memberList":"../../components/memberList/memberList"
+    "memberList":"../../components/memberList/memberList",
+    "Buttom":"../../components/button/button"
   }
 }

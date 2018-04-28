@@ -1,12 +1,14 @@
 /* components/tabBar/tabBar.wxss */
 @import '../../app.wxss';
+
+
 .tab-bar{
-  height:80rpx;
+  height:90rpx;
   border-radius:40rpx;
   /* border:3rpx #ea6c53 solid; */
   display: flex;
   flex-flow: row nowrap;
-  background:#fff;
+  background:#22307b;
   justify-content: space-between;
   overflow:hidden;
 }
@@ -15,9 +17,21 @@
   flex:1;
   justify-content: center;
   align-items: center;
-  color:#81b6ea;
+  color:#8fa5ff;
+  height:90rpx;
+  padding:10rpx;
 }
-.actived{
-  background:#3963e0;
-  color:#fff;
+.tab-item text{
+    background:#22307b;
+    color:#8fa5ff;
+    display:block;
+    height:70rpx;
+    width:100%;
+    border-radius: 35rpx;
+    line-height: 70rpx;
+    text-align: center;
+}
+.actived text{
+   background:#040d44;
+    color:#fff;
 }

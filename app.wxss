@@ -12,7 +12,7 @@ view,text,button{
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  /* background:rgba(182,146,217,0.12); */
+   background: linear-gradient(to bottom, #071448, #233586);
 } 
 /* flex布局公共样式*/
 .flex-row{
@@ -28,6 +28,9 @@ view,text,button{
 .flex-wrap{
   flex-wrap: wrap;
 }
+.flex-start{
+  justify-content: flex-start;
+}
 .flex-center{
   justify-content: center;
 }
@@ -40,8 +43,11 @@ view,text,button{
 .flex-around{
   justify-content: space-around;
 }
-.flex-baseline{
+.vertical-baseline{
   align-items: baseline;
+}
+.vertical-start{
+  align-items:flex-start;
 }
 /* background */
 .bg-white{
@@ -131,13 +137,13 @@ view,text,button{
   color:#b05701;
 }
 .text-yellow{
-  color:#faeeaf;
+  color:#f9e46e;
 }
 .text-blue{
   color:#3963e0;
 }
 .text-light-blue{
-  color:#6d9df5;
+  color:#3dcfff;
 }
 .bold{
   font-weight:bold;

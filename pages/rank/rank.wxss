@@ -1,11 +1,26 @@
 /* pages/rank/rank.wxss */
-.container{
+
+.container {
   display: block;
+  background: linear-gradient(to bottom, #071448, #233586);
 }
-.pd-all{
-  padding:35rpx;
+
+.pd-all {
+  padding: 35rpx;
 }
-.tab-content{
+
+.tab-content {
+  padding: 0 35rpx;
+  padding-bottom: 35rpx;
+}
+.rank-btn{
+ width:380rpx;
+ margin:20rpx auto;
+}
+.my-rank{
+  height:106rpx;
+  border-radius: 10rpx;
+  background:#0f1f69;
   padding:0 35rpx;
-  padding-bottom:35rpx;
+  margin-top:100rpx;
 }

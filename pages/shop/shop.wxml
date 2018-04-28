@@ -1,2 +1,6 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<view class="container pd-all-md">
+  <view class="shop-item" wx:for="{{dataList}}" wx:key="{{item.id}}" data-key="{{item.id}}" bindtap="pageJump">
+    <image src="{{item.picture}}" class="item-pic"></image>
+  </view>
+</view>

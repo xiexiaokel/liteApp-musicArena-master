@@ -10,14 +10,14 @@
         <view class="level-bar"><view class="curr-level" style="width:{{userLevel*38}}rpx;"></view></view>
       </view>
     </view>
-    <view class="online-service flex-row flex-center">
+    <view class="online-service flex-row flex-center" data-key="online" bindtap="onlineServer">
         <image src="{{onlinePic}}" class="online-pic"></image>
     </view>
   </view>
   <!-- 擂台赛 -->
   <view class="music-arena">
     <image class="music-title" src="{{titlePic}}"></image>
-    <view class="complaint-service flex-row flex-center">
+    <view class="complaint-service flex-row flex-center" data-key="complaint" bindtap="onlineServer">
         <image src="{{complaintPic}}" class="online-pic"></image>
     </view>
   </view>

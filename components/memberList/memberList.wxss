@@ -2,16 +2,17 @@
 @import '../../app.wxss';
 .member-list{
   border-radius: 10rpx;
-  padding:0 35rpx;
-  background:rgba(255,255,255,1);
 }
 .member-item{
   display: flex;
-  height: 110rpx;
+  height: 116rpx;
   flex-flow: ro nowrap;
   justify-content: space-between;
   align-items: center;
-  border-bottom:1rpx #bbe6f5 solid;
+  border-radius: 10rpx;
+  margin-bottom:10rpx;
+  background:#2b3b91;
+  padding:0 35rpx;
 }
 .member-item:last-child{
   border:0;
@@ -22,16 +23,38 @@
   justify-content: flex-start;
   align-items: center;
 }
+.gold{
+  width:63rpx;
+  height:75rpx;
+  background:url('https://duokeyun.oss-cn-qingdao.aliyuncs.com/wechat/wxapp/musicArena/images/rank_one.png');
+  background-size: cover;
+  margin-right:42rpx;
+}
+.silver{
+  width:63rpx;
+  height:75rpx;
+  background:url('https://duokeyun.oss-cn-qingdao.aliyuncs.com/wechat/wxapp/musicArena/images/rank_two.png');
+  background-size: cover;
+  margin-right:42rpx;
+}
+.bronze{
+  width:63rpx;
+  height:75rpx;
+  background:url('https://duokeyun.oss-cn-qingdao.aliyuncs.com/wechat/wxapp/musicArena/images/rank_three.png');
+  background-size: cover;
+  margin-right:42rpx;
+}
 .item-disc{
-  width:36rpx;
-  height:36rpx;
+  width:62rpx;
+  height:62rpx;
   overflow: hidden;
-  border-radius: 18rpx;
-  line-height: 36rpx;
+  border-radius:31rpx;
+  line-height: 62rpx;
   text-align: center;
+  background:#5966b1;
   color:#fff;
-  font-size:30rpx;
-  margin-right:34rpx;
+  font-size:32rpx;
+  margin-right:42rpx;
 }
 .item-user{
   display: flex;
@@ -45,6 +68,8 @@
   border-radius: 40rpx;
   overflow:hidden;
   margin-right:18rpx;
+  border:5rpx #7586e1 solid;
+  box-sizing: border-box;
 }
 .item-num{
   color:#666;

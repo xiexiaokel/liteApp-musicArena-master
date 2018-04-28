@@ -12,6 +12,12 @@ Component({
     },
     bgColor:{
       type:String
+    },
+    title:{
+      type:String,
+    },
+    bgTitle:{
+      type:String
     }
   },
   /**
@@ -29,6 +35,7 @@ Component({
       this.setData({
         showModal:false
       })
+      this.triggerEvent('closeModal');
     }
   }
 })

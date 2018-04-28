@@ -8,48 +8,52 @@ Page({
    */
   data: {
     tabTitleList: [//tab分类
-      { key: "honor", text: '荣誉榜', checked: true },
-      { key: "will", text: '毅力榜', checked: false }
+      { key: "friend", text: '好友排行', checked: true },
+      { key: "season", text: '赛季排行', checked: false }
     ],
     tabShow: 0,//控制首页tab卡默认显示内容
     // 排行榜数据
     memberList: [{
       nickName: '你大爷',
       picture: `${imgHost}/images/head_pic.png`,
+      level:'1',
       successTime: '10',
-      fightTime: '66',
+      seasonTime: '66',
     },
     {
       nickName: '你大妈',
       picture: `${imgHost}/images/head_pic.png`,
+      level: '3',
       successTime: '8',
-      fightTime: '49',
+      seasonTime: '49',
     },
     {
       nickName: '你大姨',
       picture: `${imgHost}/images/head_pic.png`,
+      level: '5',
       successTime: '5',
-      fightTime: '31',
+      seasonTime: '31',
     },
     {
       nickName: '你大舅',
       picture: `${imgHost}/images/head_pic.png`,
+      level: '2',
       successTime: '2',
-      fightTime: '16',
+      seasonTime: '16',
     },
     
     ]
   },
   tabCheck: function (e) {
     switch (e.detail.key) {
-      case 'honor':
-        console.log('荣誉榜');
+      case 'friend':
+        console.log('好友排行');
         this.setData({
           tabShow: 0,
         })
         break;
-      case 'will':
-        console.log('毅力榜');
+      case 'season':
+        console.log('赛季排行');
         this.setData({
           tabShow: 1,
         })
@@ -57,6 +61,11 @@ Page({
       default:
         break;
     }
+  },
+
+  //按钮点击自定义事件
+  myEvent:function(){
+    console.log('按钮被点击了')
   },
   /**
    * 生命周期函数--监听页面加载

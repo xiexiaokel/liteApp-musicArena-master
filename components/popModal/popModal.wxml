@@ -2,7 +2,7 @@
 <view class="pop-modal" wx:if="{{showModal}}">
     <view class="modal-mask"></view>
     <view class="modal-content" style="height:{{height}}rpx;margin-top:-{{height/2}}rpx;background:{{bgColor}}">
+        <view class="modal-title flex-col flex-center" style="background:{{bgTitle}};"><text class="ft40 text-white">{{title}}</text> <text class="modal-close" bindtap="closeModal">×</text></view>
         <slot></slot>
-        <text class="modal-close" bindtap="closeModal">×</text>
     </view>
 </view>

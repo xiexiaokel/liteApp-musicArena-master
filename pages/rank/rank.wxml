@@ -5,10 +5,21 @@
   </view>
   <view class="tab-content">
     <block wx:if="{{tabShow==0}}">
-      <memberList orderBy="prizeNumber" memberList="{{memberList}}"></memberList>
+      <memberList orderBy="{{tabShow}}" memberList="{{memberList}}"></memberList>
+       <view class="my-rank flex-row flex-between">
+          <text class="ft30 text-white">Rudy</text>
+          <text class="ft36 text-yellow">5分</text>
+          <view class="flex-col flex-end">
+              <text class="ft36 text-light-blue">2</text>
+              <text class="ft24 text-white">我的排名</text>
+          </view>
+      </view>
     </block>
     <block wx:if="{{tabShow==1}}">
-      <memberList orderBy="fightNumber" memberList="{{memberList}}"></memberList>
+      <memberList orderBy="{{tabShow}}" memberList="{{memberList}}"></memberList>
     </block>
+  </view>
+  <view class="rank-btn">
+    <Buttom bgColor="#409cff" fontColor="#fff" fontSize="30" height="76" radius="38" openType="concat" title="查看群友排名" bindbuttonTap="myEvent"></Buttom>
   </view>
 </view>

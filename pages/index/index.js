@@ -20,7 +20,6 @@ Page({
   // 页面跳转事件
   pageJump:function(e){
     const currKey = e.currentTarget.dataset.key;
-
     switch (currKey){
       case 'shop':
         wx.navigateTo({
@@ -36,6 +35,20 @@ Page({
         wx.navigateTo({
           url: '../more/more',
         });
+        break;
+      default:
+        break;
+    }
+  },
+  //在线服务
+  onlineServer:function(e){
+    const currKey = e.currentTarget.dataset.key;
+    switch(currKey){
+      case 'online':
+        console.log('执行在线客服事件');
+        break;
+      case 'complaint':
+        console.log('执行投诉事件');
         break;
       default:
         break;

@@ -1,24 +1,30 @@
 /* pages/complanit/complanit.wxss */
 .container{
-  background:#fff;
-}
-.radio-group{
   display: block;
-  width:100%;
 }
-.radio{
+.complaint-box{
+  border-radius: 15rpx;
+  background:#2b3b91;
+
+}
+.radio-group {
+  display: block;
+}
+
+.radio {
   display: flex;
-  width:100%;
-  padding:25rpx 35rpx;
-  border-bottom:1px #eee solid;
+  padding: 25rpx 35rpx;
+  border-bottom: 1px #4e61c5 solid;
   align-items: center;
 }
-.btn-group{
-  width:100%;
-  padding:35rpx;
+.btn-group {
+  width: 100%;
+  padding: 35rpx;
   box-sizing: border-box;
 }
-.submit-btn{
-  background:#a0daee;
-  color:#fff;
+
+.submit-btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
 }

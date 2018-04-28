@@ -1,0 +1,2 @@
+<!--components/button/button.wxml-->
+<button style="background-color:{{bgColor}};color:{{fontColor}};height:{{height}}rpx;line-height:{{height}}rpx;border-radius:{{radius}}rpx;font-size:{{fontSize}}rpx;" open-type="{{openType}}" disabled="{{disabled}}" hover-class='button-hover' bindtap="buttonTap">{{title}}</button>
