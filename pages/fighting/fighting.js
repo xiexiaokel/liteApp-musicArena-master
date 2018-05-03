@@ -8,11 +8,13 @@ Page({
    */
   data: {
     gameImg: `${imgHost}/images/game.gif`,
-    hasTicket: true,//判断用户是否有入场券
-    gameStep: '1',//判断游戏处于第几题，根据这个序号放入当前显示的游戏问题
+    hasTicket:1,//入场券储量
+    hasRelive:0,//复活卡数量
+    gameStep: 0,//判断游戏处于第几题，根据这个序号放入当前显示的游戏问题
+    showSuccess:false,//显示挑战成功信息
     showTicketModal: false,//是否显示获取入场券弹窗
     showRelive: false,//是否显示复活弹窗
-    gameStart: false,//游戏是否开始
+    gameStart: 0,//游戏是否开始
     showCount: true,//是否显示倒计时
     stopCount: false,//是否立即停止倒计时
     currGameData: {},//当前显示的题目数据
@@ -39,11 +41,11 @@ Page({
   //开始挑战按钮事件
   startFight: function () {
     const { hasTicket, gameStep,gameData } = this.data;
-    if (hasTicket) {
+    if (hasTicket>0) {
       this.setData({
         showTicketModal: false,//不显示获取入场券弹窗
-        currGameData:gameData[0],
-        gameStart:true
+        currGameData:gameData[gameStep],
+        gameStart:1
       })
     } else {
       this.setData({
@@ -62,13 +64,99 @@ Page({
   closeModal: function () {
     console.log('入场券弹窗关闭')
   },
-  //监听倒计时结束触发事件
-  /* countDown:function(){
-   this.setData({
-     showAlert:true,
-   })
-  }, */
-
+  //答案选择事件
+  itemCheck:function(e){
+    const currId = e.currentTarget.dataset.key;
+    const {currGameData,hasRelive} = this.data;
+    this.setData({
+      stopCount:true,//立即停止倒计时
+    })
+    currGameData.answerList.forEach((item,index)=>{
+      if(index == currId){
+        item.checked=true;
+        if(item.correct){
+          this.setData({
+            isCorrect:true
+          });
+          wx.showToast({
+            title: '挑战成功',
+            icon: 'success'
+          });
+          setTimeout(()=>{
+            this.setData({
+              gameStart:2
+            })
+          },500);
+        }else{
+          if(hasRelive>0){
+            item.checked=true;
+            this.setData({
+              hasRelive:hasRelive-1,//复活卡减少1
+            })
+            wx.showToast({
+              title: '自动使用复活卡复活,复活卡减1',
+              icon: 'none'
+            })
+            setTimeout(()=>{
+              this.setData({
+                gameStart: 2
+              })
+            },1000)
+          }
+          else{
+            this.setData({
+              showRelive:true//显示获取复活卡弹窗
+            })
+          }
+        }
+      }
+      else{
+        item.checked=false;
+      }
+    })
+    this.setData({
+      currGameData
+    })
+  },
+  //继续挑战事件
+  nextFight:function(){
+    this.setData({
+      stopCount:false,//恢复倒计时
+    })
+    console.log('继续挑战');
+    const {gameStep,gameData,currGameData} = this.data;
+    if(gameStep<gameData.length-1){
+      this.setData({
+        currGameData: gameData[gameStep + 1],
+        gameStart: 1,
+        gameStep: gameStep + 1
+      })
+    }
+    else{
+     wx.showToast({
+       title: '已经全部回答完毕',
+       icon:'none'
+     })
+    }
+  },
+  //返回首页
+  goHome:function(){
+    wx.navigateBack({
+      delta:1
+    })
+    this.setData({
+      gameStart:0,
+      gameStep:1,
+    })
+  },
+  //分享方法
+  share:function(){
+    console.log('分享结果');
+    this.setData({
+      gameStart: 0,
+      gameStep: 1,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

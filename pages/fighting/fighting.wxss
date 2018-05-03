@@ -60,3 +60,52 @@
   padding:0 35rpx;
   margin-bottom:30rpx;
 }
+
+/* 游戏问题区 */
+.game-list{}
+.game-title{
+
+}
+.answer-list{
+  padding-top:50rpx;
+  width:580rpx;
+}
+.answer-item{
+  height:90rpx;
+  margin-bottom:40rpx;
+}
+.answer-item text{
+  display: block;
+  height:90rpx;
+  border-radius: 10rpx;
+  background:#fff;
+  color:#1f1f1f;
+  font-size:36rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+.answer-item .answer-correct{
+  background:#20bb7b;
+  color:#fff;
+}
+.answer-item .answer-wrong{
+  background:#e84a68;
+  color:#fff;
+}
+
+/* 挑战成功 */
+.success{
+  padding-top:30rpx;
+  width:580rpx;
+  margin:0 auto;
+}
+.success .ft32{
+  line-height: 50rpx;
+}
+.full-button{
+  width:100%;
+  margin:35rpx 0;
+}
+.half-button{
+  width:270rpx;
+}

@@ -1,4 +1,7 @@
-// components/popModal/popModal.js
+/* 组件说明 */
+
+/* closeModal为暴露给外部的弹窗关闭后执行的方法，监听此方法可执行自己自定义的操作 */
+
 Component({
   /**
    * 组件的属性列表

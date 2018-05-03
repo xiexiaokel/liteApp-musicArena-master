@@ -9,7 +9,7 @@
   title:按钮文字,
   openType:对接小程序原生按钮的开放功能,
   disabled:是否禁用按钮
-
+  buttonTap:按钮点击事件
 */
 
 

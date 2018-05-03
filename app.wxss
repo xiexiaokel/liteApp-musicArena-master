@@ -105,6 +105,9 @@ view,text,button{
 .ft72{
   font-size:72rpx;
 }
+.ft96{
+  font-size:96rpx;
+}
 /* font color*/
 .text-white{
   color:#fff;
